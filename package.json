@@ -1,0 +1,39 @@
+{
+  "name": "flatiron-cli-ok",
+  "version": "0.1.0",
+  "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (pksunkara.github.com)",
+  "description": "Encapsulated logic for showing ok in flatiron CLI apps",
+  "main": "./index",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pksunkara/flatiron-cli-ok.git"
+  },
+  "keywords": [
+    "flatiron",
+    "cli",
+    "ok",
+    "plugin"
+  ],
+  "homepage": "http://pksunkara.github.com/flatiron-cli-ok",
+  "scripts": {},
+  "contributors": [
+    {
+      "name": "Pavan Kumar Sunkara",
+      "email": "pavan.sss1991@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.6"
+  },
+  "bugs": {
+    "url": "https://github.com/pksunkara/flatiron-cli-ok/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/pksunkara/flatiron-cli-ok/raw/master/LICENSE"
+    }
+  ]
+}
