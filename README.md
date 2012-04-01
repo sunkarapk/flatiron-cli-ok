@@ -13,10 +13,6 @@ At its core `flatiron-cli-ok` is a broadway-compatible plugin which can be used 
 var flatiron = require('flatiron')
   , app = flatiron.app;
 
-//
-// Configure the Application to be a CLI app with
-// a JSON configuration file `test-config.json`
-//
 app.name = 'app.js';
 
 app.use(flatiron.plugins.cli, {
@@ -25,20 +21,34 @@ app.use(flatiron.plugins.cli, {
 
 app.use(require('flatiron-cli-ok'));
 
-if (!module.parent) {
-  app.start();
-}
+app.start();
 ```
 
 If you run the above script
 
 ```bash
-$ node app.js
+➤ node app.js
 ```
 
-The output will be
+The output will start with
 
 ```bash
+info:   Welcome to app.js
+info:   It worked if it ends with app.js ok
+```
+
+and ends with
+
+* If the command executed successfully
+
+```bash
+info:   app.js ok
+```
+
+* If the command executed unsuccessfully
+
+```bash
+info:   app.js not ok
 ```
 
 If you like this project, please watch this and [follow](http://github.com/users/follow?target=pksunkara) me.
