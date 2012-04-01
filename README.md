@@ -1,5 +1,5 @@
 # flatiron-cli-ok
-Encapsulated logic for showing ok in flatiron CLI apps
+Encapsulated logic for showing command status in flatiron CLI apps
 
 ## Installation
 ```
@@ -7,7 +7,7 @@ npm install flatiron-cli-ok
 ```
 
 ## Usage
-At its core `flatiron-cli-ok` is a broadway-compatible plugin which can be used by any [flatiron](https://flatironjs.org) application
+At its core `flatiron-cli-ok` is a broadway-compatible plugin which can be used by any [flatiron](https://flatironjs.org) cli application
 
 ```js
 var flatiron = require('flatiron')
@@ -26,30 +26,34 @@ app.start();
 
 If you run the above script
 
-```bash
+```
 ➤ node app.js
 ```
 
 The output will start with
 
-```bash
+```
 info:   Welcome to app.js
 info:   It worked if it ends with app.js ok
 ```
 
-and ends with
+The output will end with
 
 * If the command executed successfully
 
-```bash
+```
 info:   app.js ok
 ```
 
 * If the command executed unsuccessfully
 
-```bash
+```
 info:   app.js not ok
 ```
+
+### IMPORTANT
+
+__You have to call the callback in the command, if you want this plugin to show the status__
 
 If you like this project, please watch this and [follow](http://github.com/users/follow?target=pksunkara) me.
 
