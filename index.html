@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>flatiron-cli-ok by pksunkara</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>flatiron-cli-ok</h1>
+        <h2>flatiron cli plugin to show status of the command</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/pksunkara/flatiron-cli-ok/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/pksunkara/flatiron-cli-ok/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/pksunkara/flatiron-cli-ok" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p>Encapsulated logic for command status in flatiron cli apps</p>
+
+<h2>Installation</h2>
+
+<pre><code>npm install flatiron-cli-ok
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>At its core <code>flatiron-cli-ok</code> is a broadway-compatible plugin which can be used by any <a href="https://flatironjs.org">flatiron</a> cli application</p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron'</span><span class="p">)</span>
+  <span class="p">,</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">flatiron</span><span class="p">.</span><span class="nx">app</span><span class="p">;</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'appname'</span><span class="p">;</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">flatiron</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">cli</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">usage</span><span class="o">:</span> <span class="s1">'A simple CLI app using flatiron-cli-ok'</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron-cli-ok'</span><span class="p">));</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+</pre>
+</div>
+
+
+<p>If you run the above script</p>
+
+<pre><code>➤ appname
+</code></pre>
+
+<p>The output will start with</p>
+
+<pre><code>info:   Welcome to appname
+info:   It worked if it ends with appname ok
+</code></pre>
+
+<p>The output will end with</p>
+
+<ul>
+<li>If the command executed successfully</li>
+</ul><pre><code>info:   appname ok
+</code></pre>
+
+<ul>
+<li>If the command executed unsuccessfully</li>
+</ul><pre><code>info:   appname not ok
+</code></pre>
+
+<h3>Show the error</h3>
+
+<p>You can give the <code>show</code> option to the plugin if you want to print the <code>err.message</code> passed to the callback</p>
+
+<div class="highlight">
+<pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'flatiron-cli-ok'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</pre>
+</div>
+
+
+<p>So in case of error, the output will end with</p>
+
+<pre><code>error:  Bad credentials
+info:   app.js not ok
+</code></pre>
+
+<p><em>You have to call the callback in the command, if you want this plugin to show the status</em></p>
+
+<h2>Contact</h2>
+
+<p>Pavan Kumar Sunkara (<a href="mailto:pavan.sss1991@gmail.com">pavan.sss1991@gmail.com</a>)</p>
+
+<p>Follow me on <a href="http://github.com/pksunkara">github</a>, <a href="http://twitter.com/pksunkara">twitter</a></p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-9209860-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
