@@ -30,6 +30,9 @@ cliOk.attach = function (options) {
     start(options || {}, function (err) {
       if (cb) return cb(err);
       if (err) {
+        if (err.message && options.show) {
+          app.log.error(err.message.red.bold);
+        }
         app.log.info(app.name.grey + ' ' + 'not'.red.bold + ' ' + 'ok'.red.bold);
       } else {
         app.log.info(app.name.grey + ' ' + 'ok'.green.bold);

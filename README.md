@@ -51,6 +51,21 @@ info:   app.js ok
 info:   app.js not ok
 ```
 
+### Show the error
+
+You can give the `show` option to the plugin if you want to print the `err.message` passed to the callback
+
+```js
+app.use('flatiron-cli-ok', { show: true });
+```
+
+So in case of error, the output will end with
+
+```
+error:  Bad credentials
+info:   app.js not ok
+```
+
 ### IMPORTANT
 
 __You have to call the callback in the command, if you want this plugin to show the status__
