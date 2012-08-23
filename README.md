@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/pksunkara/flatiron-cli-ok.png)](http://travis-ci.org/pksunkara/flatiron-cli-ok)
 # flatiron-cli-ok
 Encapsulated logic for showing command status in flatiron CLI apps
 
