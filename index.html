@@ -39,8 +39,7 @@
 
 <p>At its core <code>flatiron-cli-ok</code> is a broadway-compatible plugin which can be used by any <a href="https://flatironjs.org">flatiron</a> cli application</p>
 
-<div class="highlight">
-<pre><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron'</span><span class="p">)</span>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron'</span><span class="p">)</span>
   <span class="p">,</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">flatiron</span><span class="p">.</span><span class="nx">app</span><span class="p">;</span>
 
 <span class="nx">app</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'appname'</span><span class="p">;</span>
@@ -52,9 +51,7 @@
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron-cli-ok'</span><span class="p">));</span>
 
 <span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
-</pre>
-</div>
-
+</pre></div>
 
 <p>If you run the above script</p>
 
@@ -83,11 +80,8 @@ info:   It worked if it ends with appname ok
 
 <p>You can give the <code>show</code> option to the plugin if you want to print the <code>err.message</code> passed to the callback</p>
 
-<div class="highlight">
-<pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'flatiron-cli-ok'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'flatiron-cli-ok'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</pre></div>
 
 <p>So in case of error, the output will end with</p>
 
